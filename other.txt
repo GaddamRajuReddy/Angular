@@ -10,8 +10,7 @@ While Grunt makes use of temporary files, Gulp uses Node streams.
 Gulp is able to perform several tasks at a time, while Grunt performs tasks one after another.
 Gulp was created based on an asynchronous approach which gives an opportunity to process a lot of files independently. 
 
-Grunt is almost twice as faster as Gulp.
- If you are really comfortable writing JS functions, then Gulp is advisable, but, if you will rather write task configurations, then Grunt will suffice.
+If you are really comfortable writing JS functions, then Gulp is advisable, but, if you will rather write task configurations, then Grunt will suffice.
 
 
 Webpack is a module bundler, 
@@ -22,5 +21,4 @@ Webpack does not run during your page, it runs during your development.
 npm and bower are package managers;
 npm for It could be used both for front-end and back-end libraries.
 Bower is created solely for the front-end and is optimized with that in mind.
-
 The biggest difference between Bower and NPM is that NPM does nested dependency tree while Bower requires a flat dependency tree as below.
