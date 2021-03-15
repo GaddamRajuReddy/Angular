@@ -1,0 +1,29 @@
+abstract vs interface
+const vs readonly
+Improve performance in .net
+dispose vs finalize
+mvc?
+mvc life cycle
+angular life cycle hooks
+promise
+innerhtml
+@input, @output
+Authentication in angular
+dependency injection
+service
+sql injection
+query for max sal and top 3 sal
+Ans: select top 1 sal from (select top 3 sal fromm emp order by sal desc) order by sal asc
+inerjoin, leftjin,rightjoin
+Armstrong number program
+themes in asp.net
+how to exclude themes in asp.net
+how to secure your conection string and configurations
+master page
+autoeventwireup
+crosspagepostback
+can we use multiple language in same application
+unmanaged and managed code
+components vs directives
+ngmodel in angular
+clousers

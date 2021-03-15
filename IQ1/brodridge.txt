@@ -1,0 +1,43 @@
+abstract vs interface
+Interfaces are more flexible than base classes because you can define a single implementation that can implement multiple interfaces. Interfaces are better in situations in which you do not need to inherit implementation from a base class. Interfaces are useful in cases where you cannot use class inheritance.
+explicit implementation
+code first vs db fisrt
+connected vs disconested
+executescalar vs execute reader
+funtion vs strore procedures
+gridview events
+change row color in grid
+tempdata vs cte
+pageevnets in asp.net
+depency injection
+angular app syntax
+8 feature in angular
+brazil compiler
+repeator vs list
+limitations in webworkers
+deadlock vs livelock
+javascript vs jquery
+styles for child siblings and general siblings
+filters in mvc and methods
+attribute routing
+asp.net vs mvc
+ivy in angular?
+how to improve performance of a application?
+forms in angular
+string interpolation
+
+---------------------------
+what is the purpose of dependency injection will do?
+how to write custom class just like string immutable
+howt to make readonly class?
+DB queries using linq lamda expression: ??
+emp with age between 20 and 30 , sal having 50k
+employees  more than 50 in each dept
+action filter and custom action filters in mVC
+ado.net - execute nonquery
+
+
+
+
+
+
