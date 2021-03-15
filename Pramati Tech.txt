@@ -1,0 +1,51 @@
+Aabaavaanan Deenadayalan11:17 AM
+ildasm
+ildasm.exe
+B= new D();
+D= new B();
+Aabaavaanan Deenadayalan11:24 AM
+Claim
+in JWT
+You11:27 AM
+hi
+Aabaavaanan Deenadayalan11:29 AM
+Funnels 
+Aabaavaanan Deenadayalan11:31 AM
+self signed certificates
+Aabaavaanan Deenadayalan11:40 AM
+EMP NO      NAME    ManagerID
+199     DIVYA         100
+100 AABAA     50
+Aabaavaanan Deenadayalan11:52 AM
+pdb
+dll
+exe
+Aabaavaanan Deenadayalan11:54 AM
+Answered the following Questions:
+1. what is assembly? - private/public/satellite
+2. What is CTS?
+3. Object initialization B=new D() or D=new B();
+4. Explain JWT?
+5. What is loading in Angular?
+6. Pass data b/w Parent to child and vice versa in angular?
+7. What is views?
+8. Self Join in SQL
+9. Perfomance tuning in SQL server stored procedure
+10. Triggers in SQL
+11. Array vs ArrayList
+12. Session Modes - InProc/out Proc
+13. var vs dynamic
+14. 
+
+
+Failed to answer:
+1. what is the use of ildasm?
+2. 
+. What is Reflection?
+3. What is Extension methods?
+4. Claims in JWT?
+5. Application pool in IIS?
+6. Bundling/ViewModel in MVC.
+7. Azure AD working process
+8. what are pdb files?
+9. What are certificates?
