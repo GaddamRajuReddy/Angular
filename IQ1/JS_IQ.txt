@@ -1,0 +1,250 @@
+1.How can we find whether an object is array or not using Javascript and jQuery. false
+a) Array.isArray(obj)/jQuery.isArrya(obj)/$.isArray(obj)/ obj instance of Array.
+
+2.how to check if variable is an object or an array. false
+a)[].constructor.name === 'Array'/({}).constructor.name === 'Object' || Array.isArray(arr)/Object.keys(obj).length.
+
+3.Singleton pattern? false
+A Singleton is an object which can only be instantiated one time. Repeated calls to its constructor return the same instance 
+and this way one can ensure that they don't accidentally create multiple instances.
+
+var object = new function(){
+   this.name = "Sudheer";
+}
+
+4.What is the difference between Call, Apply and Bind. false
+
+5.the difference between slice and splice. 
+
+6.null == undefined // true
+null === undefined // false
+'0' == false // true
+'0' === false // false
+[]==[] or []===[] //false, refer different objects in memory false
+{}=={} or {}==={} //false, refer different objects in memory
+
+7.difference between first class function and first order functions and higher-order functions. 
+
+8.unary function?
+
+9.What is the Temporal Dead Zone false
+
+The Temporal Dead Zone is a behavior in JavaScript that occurs when declaring a variable with the let and const keywords, but not with var. 
+In ECMAScript 6, accessing a let or const variable before its declaration (within its scope) causes a ReferenceError. 
+The time span when that happens, between the creation of a variable’s binding and its declaration, is called the temporal dead zone. 
+Let's see this behavior with an example,
+
+function somemethod() {
+  console.log(counter1); // undefined
+  console.log(counter2); // ReferenceError
+  var counter1 = 1;
+  let counter2 = 2;
+}
+
+10.What is the benefit of using modules
+Maintainability
+Reusability
+Namespacing
+
+11.What is memoization? false
+Memoization is a programming technique which attempts to increase a function’s performance by caching its previously computed results.
+const memoizAddition = () => {
+  let cache = {};
+ return (value) => {
+  if (value in cache) {
+   console.log('Fetching from cache');
+   return cache[value]; // Here, cache.value cannot be used as property name starts with the number which is not a valid JavaScript  identifier.
+ Hence, can only be accessed using the square bracket notation.
+  }
+  else {
+   console.log('Calculating result');
+   let result = value + 20;
+   cache[value] = result;
+   return result;
+  }
+ }
+}
+// returned function from memoizAddition
+const addition = memoizAddition();
+console.log(addition(20)); //output: 40 calculated
+console.log(addition(20)); //output: 40 cached
+
+12.What is scope in javascript? no
+Scope is the accessibility of variables, functions, and objects in some particular part of your code during runtime. In other words, 
+scope determines the visibility of variables and other resources in areas of your code.
+
+13.How do you check web storage browser support?
+if (typeof(Storage) !== "undefined") {
+  // Code for localStorage/sessionStorage.
+} else {
+  // Sorry! No Web Storage support..
+}
+
+
+14.What is a promise?ok
+A promise is an object that may produce a single value some time in the future with either a resolved value or a reason that it’s not resolved(for example, network error). It will be in one of the 3 possible states: fulfilled, rejected, or pending.
+
+The syntax of Promise creation looks like below,
+
+    const promise = new Promise(function(resolve, reject) {
+      // promise description
+    })
+
+15.Why do you need a promise?ok
+Promises are used to handle asynchronous operations.
+ They provide an alternative approach for callbacks by reducing the callback hell and writing the cleaner code.
+
+16.What is a callback function?ok
+A callback function is a function passed into another function as an argument. 
+This function is invoked inside the outer function to complete an action. Let's take a simple example of how to use callback function
+
+function callbackFunction(name) {
+  console.log('Hello ' + name);
+}
+
+function outerFunction(callback) {
+  let name = prompt('Please enter your name.');
+  callback(name);
+}
+
+outerFunction(callbackFunction);
+
+17.What is a callback hell?ok
+Callback Hell is an anti-pattern with multiple nested callbacks which makes code hard to read and debug when dealing with asynchronous logic.
+The callback hell looks like below,
+
+async1(function(){
+    async2(function(){
+        async3(function(){
+            async4(function(){
+                ....
+            });
+        });
+    });
+});
+
+18.What is promise.all?
+Promise.all is a promise that takes an array of promises as an input (an iterable), 
+and it gets resolved when all the promises get resolved or any one of them gets rejected. For example, the syntax of promise.all method is below,
+
+Promise.all([Promise1, Promise2, Promise3]) .then(result) => {   console.log(result) }) .catch(error => console.log(`Error in promises ${error}`))
+
+19.What is the purpose of the race method in promise?
+Promise.race() method will return the promise instance which is firstly resolved or rejected.
+Let's take an example of race() method where promise2 is resolved first
+
+var promise1 = new Promise(function(resolve, reject) {
+    setTimeout(resolve, 500, 'one');
+});
+var promise2 = new Promise(function(resolve, reject) {
+    setTimeout(resolve, 100, 'two');
+});
+
+Promise.race([promise1, promise2]).then(function(value) {
+  console.log(value); // "two" // Both promises will resolve, but promise2 is faster
+});
+
+20.What is a strict mode in javascript?
+Strict Mode is a new feature in ECMAScript 5 that allows you to place a program, or a function, in a “strict” operating context.
+ This way it prevents certain actions from being taken and throws more exceptions. 
+The literal expression "use strict"; instructs the browser to use the javascript code in the Strict mode.
+
+21.Why do you need strict mode
+Strict mode is useful to write "secure" JavaScript by notifying "bad syntax" into real errors. 
+For example, it eliminates accidentally creating a global variable by throwing an error and also throws an error for assignment to a non-writable property, 
+a getter-only property, a non-existing property, a non-existing variable, or a non-existing object.
+
+22.What is the purpose of double exclamation
+The double exclamation or negation(!!) ensures the resulting type is a boolean. 
+If it was falsey (e.g. 0, null, undefined, etc.), it will be false, otherwise, true. For example, you can test IE version using this expression as below,
+
+let isIE8 = false;
+isIE8 = !! navigator.userAgent.match(/MSIE 8.0/);
+console.log(isIE8); // returns true or false
+
+23.What is eval
+The eval() function evaluates JavaScript code represented as a string. 
+The string can be a JavaScript expression, variable, statement, or sequence of statements.
+
+console.log(eval('1 + 2')); //  3
+
+24.What is the difference between window and document
+Below are the main differences between window and document,
+
+Window	Document
+It is the root level element in any web page	It is the direct child of the window object. This is also known as Document Object Model(DOM)
+By default window object is available implicitly in the page	You can access it via window.document or document.
+It has methods like alert(), confirm() and properties like document, location	It provides methods like getElementById, getElementByTagName, createElement etc
+
+25.What is isNaN
+The isNaN() function is used to determine whether a value is an illegal number (Not-a-Number) or not. i.e, This function returns true if the value equates to NaN. Otherwise it returns false.
+
+isNaN('Hello') //true
+isNaN('100') //false
+
+26.What are the javascript data types
+Below are the list of javascript data types available
+
+Number
+String
+Boolean
+Object
+Undefined
+
+27.What is negative infinity in javascript ?
+28.What is function hoisting ?
+29.Explain Event bubbling and Event Capturing in JavaScript? 
+30.How to encode and decode a URL in JavaScript?
+31.Lexical scope in javascript
+32.Differene between normal function and arrow function
+33.What is event bubbling
+Event bubbling is a type of event propagation where the event first triggers on the innermost target element, 
+and then successively triggers on the ancestors (parents) of the target element in the same nesting hierarchy till it reaches the outermost DOM element.
+
+34.What is event capturing
+Event capturing is a type of event propagation where the event is first captured by the outermost element, 
+and then successively triggers on the descendants (children) of the target element in the same nesting hierarchy till it reaches the innermost DOM element.
+
+35.How do you find operating system details
+The window.navigator object contains information about the visitor's browser OS details. Some of the OS properties are available under platform property,
+
+console.log(navigator.platform);
+
+36.What is an event delegation
+Event delegation is a technique for listening to events where you delegate a parent element as the listener for all of the events that happen inside it.
+
+37.What are the various url properties of location object
+The below Location object properties can be used to access URL components of the page,
+
+href - The entire URL
+protocol - The protocol of the URL
+host - The hostname and port of the URL
+hostname - The hostname of the URL
+port - The port number in the URL
+pathname - The path name of the URL
+search - The query portion of the URL
+hash - The anchor portion of the URL
+
+38.How do you check if a key exists in an object? ok
+Using in operator,Using hasOwnProperty method,Using undefined comparison.
+
+39.What is an arguments object
+The arguments object is an Array-like object accessible inside functions that contains the values of the arguments passed to that function. 
+For example, let's see how to use arguments object inside sum function,
+
+function sum() {
+    var total = 0;
+    for (var i = 0, len = arguments.length; i < len; ++i) {
+        total += arguments[i];
+    }
+    return total;
+}
+
+sum(1, 2, 3) // returns 6
+Note: You can't apply array methods on arguments object. But you can convert into a regular array as below.
+
+var argsArray = Array.prototype.slice.call(arguments);
+
+
+40.Can we define properties for functions
+Yes, We can define properties for functions because functions are also objects.
