@@ -1,0 +1,127 @@
+abstract vs interface
+
+explicit implementation
+
+code first vs db fisrt
+
+connected vs disconested
+
+executescalar vs execute reader
+
+funtion vs strore procedures
+
+gridview events
+
+change row color in grid
+
+tempdata vs cte
+
+pageevnets in asp.net
+
+depency injection
+
+angular app syntax
+
+8 feature in angular
+
+brazil compiler
+
+repeator vs list
+
+limitations in webworkers
+
+deadlock vs livelock
+
+javascript vs jquery
+
+styles for child siblings and general siblings
+
+filters in mvc and methods
+
+attribute routing
+
+asp.net vs mvc
+
+ivy in angular?
+Static vs private constructor??
+
+
+1. what is assembly? - private/public/satellite
+
+2. What is CTS?
+
+3. Object initialization B=new D() or D=new B();
+
+4. Explain JWT?
+
+5. What is loading in Angular?
+
+6. Pass data b/w Parent to child and vice versa in angular?
+
+7. What is views?
+8. Self Join in SQL
+
+9. Perfomance tuning in SQL server stored procedure
+
+10. Triggers in SQL
+
+11. Array vs ArrayList
+
+12. Session Modes - InProc/out Proc
+
+13. var vs dynamic
+
+14.interface implementation 
+
+15.Is DML operations performed on repeat or or lost control
+16.When can you go for code first and db first?
+
+
+14. 
+
+
+Failed to answer:
+
+1. what is the use of ildasm?
+
+2. 
+. What is Reflection?
+
+3. What is Extension methods?
+
+4. Claims in JWT?
+
+5. Application pool in IIS?
+
+6. Bundling/ViewModel in MVC.
+
+7. Azure AD working process
+
+8. what are pdb files?
+
+9. What are certificates?
+
+
+
+
+
+
+TCS:
+
+Solid design principles
+Design patterns
+Async and await difference
+Abstract class and interface
+Angular lo
+Lazy loading
+Dependency injection
+Routing
+Components interaction
+Ila vati meeda adigadu
+Sql lo
+What isCTE
+Indexes and types
+Triggers
+Real time scenario b/w interface and abstract class where we used
+
+
