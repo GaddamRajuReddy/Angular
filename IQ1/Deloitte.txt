@@ -63,10 +63,37 @@ rounting in angular,mvc
 five diffence in agualrjs and angular
 steps to launch application
 --------------------------------3 round-----------------------
-create procedure that accepts 2 parameters and returns sum of parameters 
-query to display StudentName, subName and marks of class 10
-even numbers display using LINQ
-program to display
+1. create procedure that accepts 2 parameters and returns sum of parameters 
+create proc addn(@a float, @b float)
+as
+begin
+declare @sum varchar(4)
+set @sum=cast((@a+@b) as VARCHAR)
+print 'the sum of '+cast(@a as varchar) + ' and ' + cast(@b as varchar) + ' is ' + cast((@a+@b) as VARCHAR)
+print @sum
+END
+
+2. query to display StudentName, subName and marks of class 10
+Student - Stid, Stname, Details
+Subject - Subid, Subname
+Marks - Stid, Subid, mark
+
+select stname,subname, marks from student s join marks m on s.stid=m.stid join subject sb on sb.subid = m.subid
+where s.class = 10
+
+3. even numbers display using LINQ
+List LstACValues = new List { 1, 7, 2, 5, 10, 16 };
+            var result = (from m in LstACValues
+                          where m % 2 == 0
+                          select m).ToList();
+            foreach (var item in result)
+                Console.WriteLine(item);
+            Console.ReadLine();
+
+print even numbers from 1 to 10 using LINQ 
+Enumerable.Range(1, 10).Where(n => n%2 == 0).ToList().ForEach(Console.WriteLine);
+
+4.program to display
 1
 12
 123
