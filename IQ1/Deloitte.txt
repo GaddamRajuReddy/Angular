@@ -1,4 +1,4 @@
-destroy vs finalize
+dispose vs finalize
 abstarct vs interface
 mediatypes in wbapi
 dependency injection
@@ -32,3 +32,61 @@ These codes are checked automatically Continuous Integration helps in detecting 
 Ans: Multi-threading is a process of improving the performance of CPU. Generally, 
 it is the ability of a program to get managed by more than one user at a time or manage multiple requests by the same user. 
 Multi-threading is done by executing multiple processes that can be supported by the operating system.
+-----------------------------------------------------------------
+Tips to improve performance of C# code
+
+Choose your data type before using it
+Use For loop instead of foreach
+Choose when to use a class and when to use a structure
+Always use Stringbuilder for String concatenation operations
+Choose best way to assign class data member
+-----------------------------------------------------------------
+10 Tricks to Optimize Your Angular App
+
+ChangeDetectionStrategy.OnPush
+Detaching the Change Detector
+Local Change Detection
+Run outside Angular
+Use pure pipes
+Use trackBy option for *ngFor directive
+Optimize template expressions
+Web Workers
+
+---------------------2 round---------------
+sql queries of last four char in name , stat with letter s, minimum sal
+aithentication flow
+sql peforamance
+challenges in recent project
+Action Filters in mvc
+pipes in angular
+rounting in angular,mvc
+five diffence in agualrjs and angular
+steps to launch application
+--------------------------------3 round-----------------------
+create procedure that accepts 2 parameters and returns sum of parameters 
+query to display StudentName, subName and marks of class 10
+even numbers display using LINQ
+program to display
+1
+12
+123
+12
+1
+
+Filters in MVC
+Resuls in MVC
+Areas of MVC framework
+two controllers have same using areas
+Dependency inection in angular
+components communication in angular
+lifecycle hooks in angular
+directives in angular
+AOT in angular
+abstract vs interface
+Views in sql
+indexes in sql
+Triggers
+conencted vs disconnected
+steps to read sql storeproc in application
+executenonquery,scalar,execute reader returntypes
+application process in angular
