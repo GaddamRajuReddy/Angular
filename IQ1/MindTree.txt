@@ -18,7 +18,8 @@ inerjoin, leftjin,rightjoin
 Armstrong number program
 themes in asp.net : pagelevel as Theme="" atribute and app level in web.config as theme=""
 how to exclude themes in asp.net (EnableTheming ="false")
-how to secure your conection string and configurations
+how to secure your conection string and configurations : The best way to secure the database connection string is to encrypt the value within the configuration file. The application would then load the encrypted value from the config file, decrypt the value, and then use the decrypted value as the connection string to connect to the database.
+
 master page
 autoeventwireup
 crosspagepostback
