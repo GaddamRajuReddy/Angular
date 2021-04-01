@@ -2,6 +2,23 @@ diff between sp and function
 opps concepts
 funtion overloading and overriding 
 diff between virtual and abstract 
+Virtual function	Pure virtual function
+
+A virtual function is a member function of base class which can be redefined by derived class.	A pure virtual function is a member function of base class whose only declaration is provided in base class and should be defined in derived class otherwise derived class also becomes abstract.
+Classes having virtual functions are not abstract.	Base class containing pure virtual function becomes abstract.
+Syntax:
+virtual<func_type><func_name>()
+{
+    // code
+}
+Syntax:
+virtual<func_type><func_name>()
+    = 0;
+Definition is given in base class.	No definition is given in base class.
+Base class having virtual function can be instantiated i.e. its object can be made.	Base class having pure virtual function becomes abstract i.e. it cannot be instantiated.
+If derived class do not redefine virtual function of base class, then it does not affect compilation.	If derived class do not redefine virtual function of base class, then no compilation error but derived class also becomes abstract just like the base class.
+All derived class may or may not redefine virtual function of base class.	All derived class must redefine pure virtual function of base class otherwise derived class also becomes abstract just like base class.
+
 what is ado.net and entity framwork
 how you implimented routing in mvc
 what is action filters
