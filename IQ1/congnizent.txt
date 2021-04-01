@@ -1,0 +1,36 @@
+diff between sp and function
+opps concepts
+funtion overloading and overriding 
+diff between virtual and abstract 
+what is ado.net and entity framwork
+how you implimented routing in mvc
+what is action filters
+how to validation perform inmvc? what is  data annotations in mvc
+is data annotatioon perform client side or server side validation?
+to perform server side or client side validation what we do?
+if you want to not call action method , want to use internal purpose what command you use?
+what are http verbs in mvc -httpget, httppost
+what is entity framwork
+what is diff between controler and api controller
+what is web api?
+how authentication flow done in angular? using awt
+how you create angular application from scrach ?explain steps
+what is ng module explain its meta data
+how to fire a method in angular fro UI ? (CLICK)="METHOD NAME"
+diff between observables and promice 
+what is services 
+what is dependecy injection
+what source controls you worked ? git
+what command is used for get and commit  and merge explain?
+how did you diploy project in devops?
+what is index and types
+what is joins and types
+
+
+explain your corrent project in brif?
+your activities ? in project ?
+
+
+
+
+
