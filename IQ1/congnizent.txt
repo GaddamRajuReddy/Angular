@@ -39,6 +39,12 @@ what is services
 what is dependecy injection
 what source controls you worked ? git
 what command is used for get and commit  and merge explain?
+
+PULL: git pull 'remote_name' 'branch_name'
+new branch: git checkout -b 'branch_name'
+Push: git push -u origin master
+Commit: git commit -m 'your message'
+
 how did you diploy project in devops?
 what is index and types
 what is joins and types
