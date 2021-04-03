@@ -54,6 +54,20 @@ explain your corrent project in brif?
 your activities ? in project ?
 
 
+--------------------------------------------------divya------------------------------------
+ctc vs temptabl ? why ctc
+view have multiple controllers how to handle
+cache with dynamic data how to handle
+normalization
+how to delete duplicate if rownumber() or partition is not there
+how to validate form fields
+template vs reactive forms? why we call it as reactive
+linq : get 5th to 10th row and particlar rows
+view in sql
+promise vs observable? when to choose both them
+compile time polymorphism vs run time polymorphism? when to choose
+
+
 
 
 
