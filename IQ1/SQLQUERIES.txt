@@ -1,0 +1,81 @@
+Q1: Query to retrive first/last/middle of charaters from table.
+
+SELECT LEFT('DIVYAPIDIGE', 3) 	RESULT:DIV
+SELECT RIGHT('DIVYAPIDIGE', 3)	RESULT:IGE
+SELECT CHARINDEX('@', PIDIGEDIVYA@GMAIL.COM) RESULT: 12
+SELECT SUBSTRING('PIDIGEDIVYA@GMAIL.COM', 13, 9) RESULT:GMAIL.COM
+
+Q2: Query to retrive employee name "start or end" with specific letter from table.
+
+SELECT EMPNAME FROM EMPLOYEE WHERE EMPNAME LIKE 'S%'  --START WITH
+SELECT EMPNAME FROM EMPLOYEE WHERE EMPNAME LIKE '%S'  --END WITH
+
+Q3: Query to find 2/3/5/nth highest salary in below different ways
+
+USING MAX:
+
+SELECT MAX(SAL) FROM EMP WHERE SAL < (SELECT MAX(SAL) FROM EMP)
+
+USING SUBQUERY:
+
+SELECT TOP 1 SAL FROM (SELECT DISTINCT TOP 2/3/5/N SAL FROM EMP ORDER BY SAL DESC)
+RESULT
+ORDER BY SAL
+
+USING CTE(COMMON TABLE EXPRESION):
+
+WITH RESULT AS (SELECT SAL , DENSE_RANK() OVER (ORDER BY SAL DESC) AS DENSERANK FROM EMP)
+SELECT TOP 1 SAL FROM RESULT WHERE RESULT.SAL = 2/3/5/N
+
+Note: Prepare mostly using CTE, where DENSE_RANK() will assign a rank(value) to each row in a table. if row has duplicate salary data, it will give common rank.
+ 
+Q4: Query to delete duplicate rows in a table
+
+WITH EMPLOYEECTE AS (SELECT *, ROW_NUMBER() OVER (PARTITION BY ID ORDER BY ID) AS ROWNUMBER FROM EMP)
+DELETE FROM EMPLOYEECTE WHERE ROWNUMBER > 1
+
+Note: Prepare mostly using CTE, where ROW_NUMBER() will assign a rank(value) to each row in a table. if row has duplicate data, it will give unique rank.
+
+Q5: create procedure that accepts 2 parameters and returns sum of parameters  
+
+create proc addn(@a float, @b float)
+as
+begin
+declare @sum varchar(4)
+set @sum=cast((@a+@b) as VARCHAR)
+print 'the sum of '+cast(@a as varchar) + ' and ' + cast(@b as varchar) + ' is ' + cast((@a+@b) as VARCHAR)
+print @sum
+END
+
+Q6: query to display StudentName, subName and marks of class 10
+
+Student - Stid, Stname, Details
+Subject - Subid, Subname
+Marks - Stid, Subid, mark
+
+select stname,subname, marks from student s join marks m on s.stid=m.stid join subject sb on sb.subid = m.subid
+where s.class = 10
+
+Q7: query to find employee with age between 20 and 30 , sal having 50k
+
+SELECT NAME, SAL FROM EMP WHERE SAL > 50K AND AGE BETWEEN 20 AND 30
+ 
+
+Q8: employees  more than 50 in each dept
+
+SELECT NAME, DEPT, COUNT(*) FROM EMP 
+GROUP BY DEPT
+HAVING COUNT(*) > 50
+
+--------------------------------------------------------linq-------------------------------------------
+method syntax in linq
+datasource.condition.select
+
+query syntax in linq
+from s in source where condition select s
+
+SQL: select * from emp where age between 20 and 30
+
+QUERY SYNTAX: from s in emp where age between 20 and 30 select s
+
+METHOD SYNTAX: emp.where(x => x.age betwen 20 and 30)
