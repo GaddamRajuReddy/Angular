@@ -26,7 +26,7 @@ how to improve performance of a application?
 forms in angular
 string interpolation
 
----------------------------
+---------------------------2 round-----------------------------------------------
 what is the purpose of dependency injection will do?
 how to write custom class just like string immutable
 howt to make readonly class?
@@ -35,9 +35,24 @@ emp with age between 20 and 30 , sal having 50k
 employees  more than 50 in each dept
 action filter and custom action filters in mVC
 ado.net - execute nonquery
+Digital signature
+how to secure your mail that communicate two parties
+excrytion algorithams? for infy or icic bank
+is JS has classes
+--------------------------------------------------------------------------------
+method syntax in linq
+datasource.condition.select
 
+query syntax in linq
+from s in source where condition select s
 
+select * from emp where age between 20 and 30
 
+from s in emp where age between 20 and 30 select s
 
+emp.where(x => x.age betwen 20 and 30)
 
+SELECT NAME, DEPT, COUNT(*) FROM EMP 
+GROUP BY DEPT
+HAVING COUNT(*) > 50
 
