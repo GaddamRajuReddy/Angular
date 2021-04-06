@@ -117,3 +117,13 @@ conencted vs disconnected
 steps to read sql storeproc in application
 executenonquery,scalar,execute reader returntypes
 application process in angular
+
+--------------------------------------4th round--------------------------------------------
+
+generic class definition in c#
+3rd hihest salary in sql
+interfaces
+routes in angular
+duplicate remove in table
+collections in c#
+
