@@ -121,9 +121,11 @@ application process in angular
 --------------------------------------4th round--------------------------------------------
 
 generic class definition in c#
-3rd hihest salary in sql
+3rd highest salary in sql
 interfaces
 routes in angular
 duplicate remove in table
 collections in c#
+types of guards in angular
+types of decorators in angular
 
