@@ -1,0 +1,76 @@
+how to secure cookies in asp.net
+
+1. By running HTTPS only, no-one can inspect the traffic between the browser and the webserver using a man-in-the-middle attack or something similar
+2. HTTP only cookies can only be accessed by the server during an HTTP (S!) request
+
+In web.config file
+
+<system.web>
+    ...
+    <httpCookies httpOnlyCookies="true" requireSSL="true" />
+</system.web>
+
+In C# code
+
+Response.Cookies.Add(
+    new HttpCookie("key", "value")
+    {
+        HttpOnly = true,
+        Secure = true,
+    });
+
+
+Avoid TRACE requests (Cross-Site Tracing):
+
+There's a technique called Cross-Site Tracing (XST) where a hacker uses the request methods TRACE or TRACK to bypass cookies marked as HttpOnly
+The TRACE method is originally intended to help debugging, by letting the client know how a server sees a request. 
+This debugging info is printed to the response, making it readable from the client.
+var xhr = new XMLHttpRequest();
+xhr.open('TRACE', 'https://my.domain/', false);
+xhr.send(null);
+console.log(xhr.responseText);
+
+modern browsers won't let anyone make TRACE requests from JavaScript
+<system.webServer>
+  <security>
+    <requestFiltering>
+      <verbs>
+        <add verb="TRACE" allowed="false" />
+        <add verb="TRACK" allowed="false" />
+      </verbs>
+    </requestFiltering>
+  </security>
+</system.webServer>
+The verbs element includes a list of HTTP verbs not allowed.
+
+SameSite to avoid cross-site request forgery: 
+
+CSRF is the practice of cheating the user into requesting a website where he/she is already logged in. This can be in the form of hidden forms, image elements, and more.
+For Example:
+If a page on domain domain1.com requests a URL on domain1.com and the cookies are decorated with the SameSite attribute, cookies are sent between the client and server. 
+If domain2.com requests domain1.com and the cookies of the website on domain1.com are decorated with the SameSite attribute, cookies are not exchanged.
+
+.NET 4.7.2 and .NET Core 3.1 both supports the SameSite attribute
+<system.webServer>
+  <rewrite>
+    <outboundRules>
+      <clear />
+      <rule name="Add SameSite" preCondition="No SameSite">
+        <match serverVariable="RESPONSE_Set_Cookie" pattern=".*" negate="false" />
+        <action type="Rewrite" value="{R:0}; SameSite=lax" />
+      </rule>
+      <preConditions>
+        <preCondition name="No SameSite">
+          <add input="{RESPONSE_Set_Cookie}" pattern="." />
+          <add input="{RESPONSE_Set_Cookie}" pattern="; SameSite=lax" negate="true" />
+        </preCondition>
+      </preConditions>
+    </outboundRules>
+  </rewrite>
+  ...
+</system.webServer>
+
+The rule automatically appends SameSite=lax to all cookies. lax means send the cookie on first-party requests or top-level navigation (URL in the browser changes). Another possible value is strict where a cookie is only sent on first-party requests. 
+In this case, a domain linking to your site will cause IIS not to send the cookie.
+
+Note: Both ASP.NET and ASP.NET Core supports generating tokens for the server to validate each request. Here you let your server generate a unique token and update all of your forms to include this token. When posting data back to the server, ASP.NET (Core) validates the token and throws an error if invalid.
