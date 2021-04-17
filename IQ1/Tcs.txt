@@ -1,0 +1,10 @@
+Types of Dependency Injection
+OAuthorization method input types
+Difference between mvc controller and web api controller
+How dependency injection works
+what is middleware in mvc
+what is routeguards method in Angular
+what are input types we need to pass in canactivate
+output of canactivate
+othe than canactivate method, what are other methods
+How to authenticate with azure,what library will use ?How many you will use?
