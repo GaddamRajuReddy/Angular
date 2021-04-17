@@ -67,6 +67,13 @@ SELECT NAME, DEPT, COUNT(*) FROM EMP
 GROUP BY DEPT
 HAVING COUNT(*) > 50
 
+Q9: Department with maximum employees
+
+SELECT Top1 DEPTNAME FROM EMP 
+JOIN DEPT 
+ON EMP.DEPID=DEPT.ID
+GROUP BY DEPTNAME
+ORDERBY COUNT(*) DESC
 --------------------------------------------------------linq-------------------------------------------
 method syntax in linq
 datasource.condition.select
@@ -79,3 +86,21 @@ SQL: select * from emp where age between 20 and 30
 QUERY SYNTAX: from s in emp where age between 20 and 30 select s
 
 METHOD SYNTAX: emp.where(x => x.age betwen 20 and 30)
+
+ELEMENT OPERATORS IN LINQ:
+
+FIRST/FIRSTORDEFAULT
+LAST/LASTORDEFAULT
+ELEMENT/ELEMENTORDEFAULT
+SINGLE/SINGLEORDEFAULT
+DEFAULTIFEMPTY
+
+CONVERSION OPERATORS:
+TOLIST()
+TOARRAY()
+TODICTIONARY()
+TOLOOKUP()
+CAST()
+OFFTYPE()
+ASENUMERABLE()
+ASQUERYABLE()
