@@ -1,10 +1,34 @@
-Types of Dependency Injection
-OAuthorization method input types
-Difference between mvc controller and web api controller
-How dependency injection works
-what is middleware in mvc
-what is routeguards method in Angular
-what are input types we need to pass in canactivate
-output of canactivate
-othe than canactivate method, what are other methods
+Types of Dependency Injection?
+Constructor Injection.
+Setter Injection.
+Method Injection
+-------------------------------------------
+OAuthorization method input types?
+Difference between mvc controller and web api controller?
+
+We can use the MVC for developing  the Web application that replies as both data and views but the Web API is used for generating the HTTP services that replies only as data.
+In the Web API the request performs tracing with the actions depending on the HTTP services but the MVC request performs tracing with the action name.
+The Web API returns the data in various formats, such as JSON, XML and other format based on the accept header of the request. But the MVC returns the data in the JSON format by using JSONResult.
+The Web API supports content negotiation, self hosting. All these are not supported by the MVC.
+The Web API includes the various features of the MVC, such as routing, model binding but these features are different and are defined in the "System.Web.Http" assembly. And the MVC features are defined in the " System.Web.Mvc" assembly.
+The Web API helps the creation of RESTful services over the .Net Framework but the MVC does not support.
+------------------------------------------------------
+How dependency injection works?
+https://stackify.com/dependency-injection-c-sharp/
+
+what is middleware in mvc?
+Middleware are software components that are assembled into an application pipeline to handle requests and responses.
+
+Each component chooses whether to pass the request on to the next component in the pipeline, and can perform certain actions before and after the next component is invoked in the pipeline
+https://dzone.com/articles/an-absolute-beginners-tutorial-on-middleware-in-as
+what is routeguards method in Angular ?- canactivate,deactivate,canload
+canActivate is used to prevent unauthorized users from accessing certain routes. ...
+canLoad is used to prevent the application from loading entire modules lazily if the user is
+deactivate: Interface that a class can implement to be a guard deciding if a route can be deactivated. 
+If all guards return true , navigation continues. If any guard returns false , navigation is cancelled.
+
+Auth-guard makes use of CanActivate interface and it checks for if the user is logged in or not. If it returns true, then the execution for the requested route will continue, and if it returns false, that the requested route will be kicked off and the default route will be shown
+what are input types we need to pass in canactivate? --Activatedroutersnapshot , Routerstatesnapshot
+output of canactivate? --boolean value
+othe than canactivate method, what are other methods?
 How to authenticate with azure,what library will use ?How many you will use?
