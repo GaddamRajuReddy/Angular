@@ -55,19 +55,34 @@ your activities ? in project ?
 
 
 --------------------------------------------------divya------------------------------------
-ctc vs temptabl ? why ctc
-view have multiple controllers how to handle
-cache with dynamic data how to handle
-normalization
-how to delete duplicate if rownumber() or partition is not there
-how to validate form fields
-template vs reactive forms? why we call it as reactive
-linq : get 5th to 10th row and particlar rows
-view in sql
+ctc vs temptabl ? why ctc?
+Temp Tables are physically created in the tempdb database. These tables act as the normal table and also can have constraints, an index like normal tables.
+CTE is a named temporary result set which is used to manipulate the complex sub-queries data. This exists for the scope of a statement. This is created in memory rather than the Tempdb database. You cannot create an index on CTE.
+Table Variable acts like a variable and exists for a particular batch of query execution. It gets dropped once it comes out of a batch. This is also created in the tempdb database but not the memory.
+
+When to use CTE?
+This is used to store the result of a complex subquery for further use.
+This is also used to create a recursive query.
+
+view have multiple controllers how to handle?
+Yes, It is possible to share a view across multiple controllers by putting a view into the shared folder. By doing like this, you can automatically make the view available across multiple controllers.
+
+cache with dynamic data how to handle?
+normalization?
+Normalization is the process of organizing data into a related table; it also eliminates redundancy and increases the integrity which improves performance of the query. To normalize a database, we divide the database into tables and establish relationships between the tables.
+how to delete duplicate if rownumber() or partition is not there?
+how to validate form fields?
+template vs reactive forms? why we call it as reactive?
+linq : get 5th to 10th row and particlar rows?---elementAt
+view in sql?
 promise vs observable? when to choose both them
-compile time polymorphism vs run time polymorphism? when to choose
+compile time polymorphism vs run time polymorphism? when to choose?
 
-
+-----------------------------------------------------------------------2 round------------------------
+exception handling in angular?
+grid systems in angular?
+best practices in code?
+how to use share services in angular? component communication?
 
 
 
