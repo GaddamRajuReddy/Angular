@@ -12,7 +12,8 @@ pageevnets in asp.net
 depency injection
 angular app syntax
 8 feature in angular
-brazil compiler
+brazil compiler -- it will only build what has changed since the last build.
+https://blog.bitsrc.io/angular-8-bazel-walkthrough-f7585bcaf282
 repeator vs list
 limitations in webworkers
 deadlock vs livelock
