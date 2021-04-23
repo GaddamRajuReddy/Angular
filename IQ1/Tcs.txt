@@ -31,4 +31,10 @@ Auth-guard makes use of CanActivate interface and it checks for if the user is l
 what are input types we need to pass in canactivate? --Activatedroutersnapshot , Routerstatesnapshot
 output of canactivate? --boolean value
 othe than canactivate method, what are other methods?
+CanActivate guard (e.g. it checks route access).
+CanActivateChild guard (checks child route access).
+CanDeactivate guard (prompt for unsaved changes).
+Resolve guard (pre-fetching route data).
+CanLoad guard (check before loading feature module assets).
+-----------------------------
 How to authenticate with azure,what library will use ?How many you will use?
